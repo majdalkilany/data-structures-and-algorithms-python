@@ -9,4 +9,4 @@ loops (for)
 
 
 ## Solution
-![solution](../../assits/1.jpeg)
+![solution](1.jpeg)
