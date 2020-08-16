@@ -9,4 +9,4 @@ loops (for)
 
 
 ## Solution
-![solution](1.jpeg)
+![solution](https://github.com/majdalkilany/data-structures-and-algorithms-python/blob/master/data-structures-and-algorithms-python/data_structures_and_algorithms/assets/WhatsApp%20Image%202020-08-16%20at%2010.12.41%20PM.jpeg)
