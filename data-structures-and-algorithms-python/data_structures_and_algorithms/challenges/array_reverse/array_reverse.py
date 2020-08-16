@@ -10,7 +10,7 @@ def reverse_array(arr):
     # put your function implementation here
     rev_arr = []
     for i in range(0,len(arr)) :
-        rev_arr.append(arr[len(arr)-i -1])
+        rev_arr.append(arr[len(arr)-1 -i])
         print(arr[len(arr)-1-i ])
     return rev_arr
 print(reverse_array([1,2,3,4]))
