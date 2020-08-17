@@ -9,4 +9,4 @@ loops (for)
 
 
 ## Solution
-![solution](1.jpeg)
+<img src="../../assets/1.1.jpg" alt="My cool logo"/>
