@@ -10,6 +10,7 @@ python = "^3.8"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 black = {version = "^19.10b0", allow-prereleases = true}
+pytest-watch = "^4.2.0"
 
 
 [build-system]
