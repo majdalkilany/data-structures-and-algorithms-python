@@ -15,5 +15,5 @@ def array_binary_search (val,my_list):
     if found != False :
         return index_item
     else:
-        return 'the value is not in the lest '
-print(array_binary_search(4,[1,2,3,4,5,6,7,8,9,10,11,12]))
+        return 'the value is not in the list '
+print(array_binary_search(4,[]))
