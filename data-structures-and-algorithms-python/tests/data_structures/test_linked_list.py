@@ -70,4 +70,35 @@ def test_str():
 
 
 
+def test_insert_before():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert_before(2,3)
+    assert ll.__str__() == "{'1'} ->{'3'} ->{'2'} ->"
 
+
+
+def test_insert_before_head():
+    ll = LinkedList()
+    ll.append(5)
+    ll.append(6)
+    ll.insert_before(5,4)
+    assert ll.__str__() == "{'4'} ->{'5'} ->{'6'} ->"
+
+
+def test_insert_after_the_last_one():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_after(3,4)
+    assert ll.__str__() == "{'1'} ->{'2'} ->{'3'} ->{'4'} ->"
+
+def test_insert_after():
+    ll = LinkedList()
+    ll.insert(5)
+    ll.append(6)
+    ll.insert_after(6,8)
+    ll.insert(7)
+    assert ll.__str__() == "{'5'} ->{'6'} ->{'8'} ->{'7'} ->"

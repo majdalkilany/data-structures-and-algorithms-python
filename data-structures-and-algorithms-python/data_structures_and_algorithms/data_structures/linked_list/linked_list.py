@@ -84,6 +84,31 @@ class LinkedList():
 
 
 
+
+
+
+    def insert_after(self, value, new_value):
+        new_node = Node(new_value)
+        current = self.head
+        if not self.head:
+                self.head = new_node
+        else:
+            current = self.head
+            while current.next != None:
+                if current.next.value == value:
+                    current = current.next
+                    node_old = current.next
+                    current.next = new_node
+                    new_node.next = node_old
+                    return 
+                    
+                else:
+                    current = current.next
+                    
+            return
+
+
+
 if __name__ == "__main__":
     ll =LinkedList()
     ll.append(4)
@@ -93,7 +118,10 @@ if __name__ == "__main__":
     ll.insert_before('mm','d')
     ll.insert_before('d','mm')
     ll.insert_before(4,3)
+    ll.insert_after('mm',44)
     ll.insert('f')
+    ll.insert_after('f','majd')
+
     ll.append('d')
     mm = LinkedList()
     ll.append(4)

@@ -22,4 +22,7 @@ time --> Big O = O(n)
 ## api 
 insert : adds an element to the list
 includes : checks if an element exists in the list and returns a boolean (True/Flase)
+insert_befor  : adds an element to the list befor element 
+insert_befor  : adds an element to the list after element 
+append  : adds an element to the list in the last node  
 
