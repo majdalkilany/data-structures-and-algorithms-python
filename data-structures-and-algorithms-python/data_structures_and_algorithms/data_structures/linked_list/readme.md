@@ -25,4 +25,4 @@ includes : checks if an element exists in the list and returns a boolean (True/F
 insert_befor  : adds an element to the list befor element 
 insert_befor  : adds an element to the list after element 
 append  : adds an element to the list in the last node  
-
+kth_from_end : to return the index from the end to value
