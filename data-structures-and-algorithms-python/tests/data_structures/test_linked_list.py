@@ -124,3 +124,49 @@ def test_LinkedList_kth():
     expected = 8
     assert actual == expected
 
+@pytest.mark.xfail(raises=IndexError)
+def test_value_not_exists():
+    ll=LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    actual=ll.kth_from_end(4 )
+    expected= IndexError
+    assert actual==expected
+
+
+def test_check_last_value():
+    li=LinkedList()
+    li.append(1)
+    li.append(2)
+    li.append(3)
+    expected=1   
+    actual=li.kth_from_end(3)
+    assert actual==expected
+
+@pytest.mark.xfail(raises=ValueError)
+def test_value_error() :
+    ll=LinkedList()
+    ll.append(2)
+    ll.append(3)
+    actual=ll.kth_from_end(-1)
+    expected=ValueError      
+    assert actual==expected
+
+ 
+
+def test_linked_list_size_1():
+    li=LinkedList()
+    li.append(1)
+    actual=li.kth_from_end(1)
+    expected=1    
+    assert actual==expected
+
+def test_value_in_the_middle():
+    li=LinkedList()
+    li.append(1)
+    li.append(2)
+    li.append(3)
+    actual=li.kth_from_end(2)
+    expected=1      
+    assert actual==expected    
