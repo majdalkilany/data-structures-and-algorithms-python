@@ -28,5 +28,6 @@ append  : adds an element to the list in the last node
 kth_from_end : to return the index from the end to value
 
 ## solution 
+<img src="../../assets/6.jpg" alt="My cool logo"/>
 <img src="../../assets/7.jpg" alt="My cool logo"/>
 <img src="../../assets/7.1.jpg" alt="My cool logo"/>
