@@ -9,6 +9,12 @@ class LinkedList():
         self.head = None
 
     def append(self, value):
+        '''
+        this method to append value in the last node 
+
+        input ==> value
+        '''
+
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -28,6 +34,12 @@ class LinkedList():
 
 
     def insert(self, value):
+        '''
+        this method to adds an element to the list 
+
+        input ==> element
+        '''
+
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -41,6 +53,15 @@ class LinkedList():
 
 
     def includes(self, values):
+        '''
+        this method to checks if an element 
+        exists in the list and returns a boolean (True/Flase)
+
+        input ==> value 
+        output ==> boolean 
+        '''
+
+
         current_node = self.head
         while current_node.next :
 
@@ -56,6 +77,15 @@ class LinkedList():
 
 
     def insert_before(self,value,new_value):
+        '''
+        adds an element to the list befor element  
+
+        its take to element 
+        first argument the value wich we will insert befor it 
+
+        the second is the value wich we will insert 
+
+        '''
         new_node = Node(new_value)
         current = self.head
         if not self.head:
@@ -88,6 +118,18 @@ class LinkedList():
 
 
     def insert_after(self, value, new_value):
+        '''
+        
+        adds an element to the list after element  
+
+        its take to element 
+        first argument the value wich we will insert after it 
+
+        the second is the value wich we will insert 
+        
+        
+        '''
+
         new_node = Node(new_value)
         current = self.head
         if not self.head:
@@ -127,7 +169,7 @@ class LinkedList():
         arr.reverse()
 
         if k == len(arr):
-            k = k - 1
+            k = k -1
         return arr[k].value
 
 
@@ -139,7 +181,7 @@ class LinkedList():
     # ll.append(4)
     # print(ll)
     # ll.append('mm')
-    # ll.insert_before(3,4)
+    # ll.insert_aftere(3,4)
     # ll.insert_before('mm','d')
     # ll.insert_before('d','mm')
     # ll.insert_before(4,3)
