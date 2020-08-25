@@ -109,21 +109,48 @@ class LinkedList():
 
 
 
-if __name__ == "__main__":
-    ll =LinkedList()
-    ll.append(4)
-    print(ll)
-    ll.append('mm')
-    ll.insert_before(3,4)
-    ll.insert_before('mm','d')
-    ll.insert_before('d','mm')
-    ll.insert_before(4,3)
-    ll.insert_after('mm',44)
-    ll.insert('f')
-    ll.insert_after('f','majd')
 
-    ll.append('d')
-    mm = LinkedList()
-    ll.append(4)
-    print(ll)
-    print(ll.includes(4))
+
+    def kth_from_end(self, k):
+        """takes in a value(k) and returns the Node k places away from the tail"""
+        current = self.head
+        arr = []
+        if k < 0:
+            raise ValueError("value must be more than 0 ")
+        while current:
+            arr.append(current)
+            current = current.next
+
+        if len(arr) < k:
+            raise IndexError("Value extends length of List.")
+
+        arr.reverse()
+
+        if k == len(arr):
+            k = k - 1
+        return arr[k].value
+
+
+
+
+
+# if __name__ == "__main__":
+    # ll =LinkedList()
+    # ll.append(4)
+    # print(ll)
+    # ll.append('mm')
+    # ll.insert_before(3,4)
+    # ll.insert_before('mm','d')
+    # ll.insert_before('d','mm')
+    # ll.insert_before(4,3)
+    # ll.insert_after('mm',44)
+    # ll.insert('f')
+    # ll.insert_after('f','majd')
+
+    # ll.append('d')
+    # mm = LinkedList()
+    # ll.append(4)
+    # print(ll)
+    # print(ll.includes(4))
+    # print(ll.kth_from_end(3))
+

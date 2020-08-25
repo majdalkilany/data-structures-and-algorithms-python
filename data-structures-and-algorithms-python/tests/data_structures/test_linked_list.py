@@ -102,3 +102,25 @@ def test_insert_after():
     ll.insert_after(6,8)
     ll.insert(7)
     assert ll.__str__() == "{'5'} ->{'6'} ->{'8'} ->{'7'} ->"
+
+
+def test_LinkedList_kth_from():
+    ll = LinkedList()
+    ll.insert(2)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(1)
+    actual = ll.kth_from_end(0)
+    expected = 1
+    assert actual == expected
+
+def test_LinkedList_kth():
+    ll = LinkedList()
+    ll.insert(2)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(1)
+    actual = ll.kth_from_end(2)
+    expected = 8
+    assert actual == expected
+
