@@ -53,6 +53,10 @@ def test_false_value():
     ll.insert(3)
     assert ll.includes(5) == False
 
+
+
+
+
 def test_true():
     ll = LinkedList()
     ll.insert(1)
@@ -67,6 +71,24 @@ def test_str():
     ll.insert(3)
     assert ll.__str__() == "{'1'} ->{'2'} ->{'3'} ->"
 
+
+
+@pytest.mark.xfail(raises=TypeError)
+def test_insert_no_value():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    assert ll.insert() == "insert() missing 1 required positional argument: 'value' "
+
+
+@pytest.mark.xfail(raises=TypeError)
+def test_include_no_value():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    assert ll.includes() == "TypeError: includes() missing 1 required positional argument: 'values' "
 
 
 

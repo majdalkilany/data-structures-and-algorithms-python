@@ -39,37 +39,49 @@ class LinkedList():
 
         input ==> element
         '''
+                         
+        if value is None:
+            raise  TypeError("insert() missing 1 required positional argument: 'value' ") 
+        
 
-        new_node = Node(value)
-        if not self.head:
-            self.head = new_node
         else:
 
             new_node = Node(value)
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = new_node
+            if not self.head:
+                self.head = new_node
+            else:
+
+                new_node = Node(value)
+                current = self.head
+                while current.next:
+                    current = current.next
+                current.next = new_node
 
 
     def includes(self, values):
-        '''
-        this method to checks if an element 
-        exists in the list and returns a boolean (True/Flase)
-
-        input ==> value 
-        output ==> boolean 
-        '''
 
 
-        current_node = self.head
-        while current_node.next :
+          '''
+          this method to checks if an element 
+          exists in the list and returns a boolean (True/Flase)
 
-            if current_node.value == values:
-                return True
-            else:
-                current_node = current_node.next
-        return False
+          input ==> value 
+          output ==> boolean 
+          '''
+                         
+          if values is None:
+            raise  TypeError("includes() missing 1 required positional argument: 'values' ") 
+          else:
+            current_node = self.head
+            while current_node.next :
+                if current_node.value == values:
+                    return True
+                else:
+                    current_node = current_node.next
+            return False
+
+
+
 
 
 
