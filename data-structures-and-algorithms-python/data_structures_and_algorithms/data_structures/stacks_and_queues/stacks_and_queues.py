@@ -13,7 +13,7 @@ class Stack :
         while current:
             res += f"{ [current.value]} -> "
             current = current.next
-        return res + "NULL"
+        return res 
 
     def push (self,value) : 
         '''
@@ -101,10 +101,21 @@ class Queue:
         """returns bool if queue is empty"""
         return not self._front 
 
+
+    def __str__(self):
+        res = ""
+        current = self._front
+        while current:
+            res += f"{ [current.value]} -> "
+            current = current.next
+        return res 
+
+
 if __name__ == "__main__":
-    majd = Stack()
-    # majd.push(5)
-    # majd.push(6)
+    majd = Queue()
+    majd.enqueue(5)
+    majd.enqueue(6)
+    print(majd)
     # majd.push(7)
     # majd.pop()
     # majd.push(6)
