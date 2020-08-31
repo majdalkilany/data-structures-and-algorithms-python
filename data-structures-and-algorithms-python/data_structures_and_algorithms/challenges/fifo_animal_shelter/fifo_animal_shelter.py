@@ -25,62 +25,71 @@ class Cat :
         return 'cat'
 
 
-class Queue:
-    def __init__(self):
-        self._front = None
-        self._rear = None
 
-    def enqueue(self, value):
-        """add new value to front of linked list"""
-        node = Node(value)
+class Stack :
+    def __init__(self) :
 
-        if self._rear: 
-            self._rear.next = node
-            self._rear = node
-
-        else:
-            self._rear = self._front = node
-
-    def dequeue(self):
-        """removes node from linked list"""
-        if not self._front:
-            raise Exception('cannot dequeue an empty stack')
-
-        exiting = self._front
-        self._front = self._front.next
-        return exiting.value
-
-    def peek(self):
-        """returns front Node vlaue, first in line"""
-        if not self._front:
-            raise Exception('cannot peek an empty stack')
-
-        return self._front.value
-
-    def is_empty(self):
-        """returns bool if queue is empty"""
-        return not self._front 
-
-
+        self.top = None
     def __str__(self):
         res = ""
-        current = self._front
+        current = self.top
         while current:
             res += f"{ [current.value]} -> "
             current = current.next
         return res 
+
+    def push (self,value) : 
+        '''
+        it takes one value as argument and push it to the top of the stack
+        '''
+
+        if self.top == None : 
+            self.top = Node(value)
+        else :
+            new_node = Node(value)
+            new_node.next = self.top
+            self.top = new_node
+
+
+
+
+    def is_empty(self) :
+        '''
+            returns boolen if the stack is empty or not
+        '''
+
+        return self.top is None 
+
+
+
+
+    def pop(self):
+        """removes node on top of stack and returns that value"""
+        if not self.top:
+            raise Exception('cannot pop an empty stack')
+
+        if self.top:
+            outgoing = self.top
+            self.top = self.top.next
+            return outgoing.value
+
+
+
+    def peek(self):
+        """returns value at top of stack"""
+        return self.top.value
 
 
 
 class AnimalShelter : 
 
     def __init__(self):
-        self.stck = Queue()
+        self.stck = Stack()
         self.temp = []
 
 
     def enqueue(self, animal):
-        self.stck.enqueue(animal)
+        self.stck.push(animal)
         print(self.stck)
 
 
@@ -89,10 +98,10 @@ class AnimalShelter :
         c=Cat.str_cat('c')
         if pref == d or pref == c :
             while self.stck.peek() != pref :
-                self.temp.append(self.stck.dequeue())
-            an = self.stck.dequeue()
+                self.temp.append(self.stck.pop())
+            an = self.stck.pop()
             while self.temp != [] :
-                self.stck.enqueue(self.temp[-1])
+                self.stck.push(self.temp[-1])
             print(self.stck)
             return an 
         else : 
