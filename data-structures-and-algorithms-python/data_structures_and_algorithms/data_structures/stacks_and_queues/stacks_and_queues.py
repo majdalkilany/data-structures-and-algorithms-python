@@ -53,14 +53,8 @@ class Stack :
 
 
     def peek(self):
-        '''
-        return the first node value of the top of the stack:
-            output >> the top value of the stack
-        '''
-        try:
-            return self.top.value
-        except TypeError:
-            return "stack is empty"
+        """returns value at top of stack"""
+        return self.top.value
 
 
 
