@@ -1,41 +1,26 @@
 def multi_bracket_validation(input) :
-        sbr = []
-        sbl = []
-        cbr = []
-        cbl = []
-        br =  []
-        bl =  []
+    raight = ["[","{","("] 
+    left = ["]","}",")"] 
+    check = [] 
+    
+    for ch in input: 
 
-        for i in input : 
-            if  i == '{' :
-              cbr.append(i)
-            elif i =="}" :
-                cbl.append(i)
+        if ch in raight: 
+            check.append(raight.index(ch)) 
 
-            elif  i == '[' :
-                sbr.append(i)
-            elif i =="]" :
-                sbl.append(i)
+        elif ch in left: 
+            if ((len(check) > 0) and (left.index(ch) == check[-1])): 
+                check.pop() 
+            else: 
+                return False
 
-
-            elif i == '(' :
-                sbr.append(i)
-            elif i ==")" :
-                sbl.append(i)
-                
-
-
-
-        if len(sbl) == 0 and len(sbr) ==0 and len(cbr) == 00 and len(cbl) ==0 and len(bl) == 0 and len(br) == 0: 
-            return False
-
-        elif len(sbl) == len(sbr) and( len(cbr) == len(cbl)) and len(bl) == len(br) : 
-            return True
-        else : 
-            return False
+    if len(check) == 0: 
+        return True
+    else: 
+        return False
 
 
 if __name__ == "__main__":
-    multi_bracket_validation('{{{}m}}}m}}')
+    print(multi_bracket_validation('(]') )
 
 
