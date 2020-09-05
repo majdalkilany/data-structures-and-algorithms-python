@@ -73,6 +73,10 @@ class BinarySearchTree(BinaryTree):
                     current = current.right
     def contains(self, value):
         """check value in """
+         if self._root == None:
+            raise "its empty tree "
+
+
         if value in self.pre_order(): 
             return True
         else:
