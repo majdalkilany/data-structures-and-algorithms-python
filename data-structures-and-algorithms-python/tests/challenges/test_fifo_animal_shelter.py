@@ -57,3 +57,9 @@ def test_deque_from_dog_from_cats_and_dogs():
         anima.enqueue(dog_2)
         anima.dequeue(dog_2)
         assert anima.dequeue('dog')==dog_2
+
+def test_enqueue_some_thing_els():
+        anima = AnimalShelter()
+        not_cat_or_dog = 'not_cat_or_dog'
+        assert anima.enqueue(not_cat_or_dog)=='the input must be cat or dog'
+

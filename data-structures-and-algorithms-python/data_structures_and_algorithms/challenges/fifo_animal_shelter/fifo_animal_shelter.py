@@ -78,6 +78,9 @@ class AnimalShelter :
 
 
     def enqueue(self, animal):
+        '''
+        to add cat or dog to shelter
+        '''
         if  animal.__str__() == 'dog' :
              self.queue_dogs.enqueue(animal) 
         elif  animal.__str__() == 'cat' :
@@ -88,6 +91,11 @@ class AnimalShelter :
         self.not_animal.append(animal)
 
     def dequeue(self, pref):
+        '''
+        to remove cat or dog from shelter
+        '''
+
+
         dog_1= Dog('dog_1')
         cat_1=Cat('dog_1')
         if  pref.__str__() == 'dog' :
