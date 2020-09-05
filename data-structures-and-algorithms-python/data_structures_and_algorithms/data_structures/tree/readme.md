@@ -33,3 +33,6 @@ post_order : returns array of values ordered left, right, root
 add () :  add value to binery tree 
 
 contains( ) : check if value in the tree
+
+## Solution
+<img src="../../assets/15.1.jpeg" alt="My cool logo"/>
