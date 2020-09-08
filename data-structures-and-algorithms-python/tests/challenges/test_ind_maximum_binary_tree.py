@@ -28,6 +28,8 @@ def test_4():
     bt = BinaryTree()
     bt.root= Node(20)
     assert bt.find_maximum_value() == 20
+
+    
 @pytest.mark.xfail(raises=RuntimeError)
 def test_5():
     bt = BinaryTree()
