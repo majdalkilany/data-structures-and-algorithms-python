@@ -97,6 +97,32 @@ class BinaryTree:
                 breadth.enqueue(front.right)
         return items
 
+    def add(self, value):
+        node = Node(value)
+        breadth = Queue()
+
+        if self.root:
+            breadth.enqueue(self.root)
+
+            while not breadth.is_empty():
+                front = breadth.dequeue()
+                if not front.left:
+                    front.left = node
+                    return
+                if not front.right:
+                    front.right = node
+                    return
+                if front.left:
+                    breadth.enqueue(front.left)
+                if front.right:
+                    breadth.enqueue(front.right)
+
+        else:
+            self.root = node
+        return
+
+
+
 class BinarySearchTree(BinaryTree):
 
     def add(self, value):
