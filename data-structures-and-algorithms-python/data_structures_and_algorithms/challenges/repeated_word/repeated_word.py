@@ -3,14 +3,14 @@ import re
 def repeat_word(my_string):
     singles = []
     repeat = None
-    only_words = re.sub(r'[^\w\s]','',my_string, re.UNICODE) # removes punctuation
-    single_words = only_words.split() # splits by whitespace
+    only_words = re.sub(r'[^\w\s]','',my_string, re.UNICODE) 
+    single_words = only_words.split()
 
-    for word in single_words: # go through sentence
-        if word in singles: # if the word has already been passed
+    for word in single_words: 
+        if word in singles: 
             repeat = word
             break
-        singles.append(word) # it is not yet in list
+        singles.append(word) 
     return repeat
 
 if __name__ == "__main__":
